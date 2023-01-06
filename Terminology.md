@@ -7,4 +7,4 @@
 [f]: Function generate by the algorithm
 [ŷ]: Prediction
 
-
+x
