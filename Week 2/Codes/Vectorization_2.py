@@ -16,8 +16,8 @@ if len(x) == len(w):
     f_wb = f_wb+b
     end = time.time()
     print(f"Model Result Using Summation: {f_wb}")
-    duration = time.strftime('%H:%M:%S', time.gmtime(end-start))
-    print(f"Time that This Method Took: {duration}")
+    duration = 1000*(end-start)
+    print(f"Time that This Method Took: {duration:.4f} ms")
 else:
     print('The Vectors Have Different Amount of Values!')
 
@@ -27,7 +27,7 @@ if len(x) == len(w):
     f_wb = np.dot(x, w)+b
     end = time.time()
     print(f"Model Result Using Vectorization: {f_wb}")
-    duration = time.strftime('%H:%M:%S', time.gmtime(end-start))
-    print(f"Time that Vectorization Took: {duration}")
+    duration = 1000*(end-start)
+    print(f"Time that Vectorization Took: {duration:.4f} ms")
 else:
     print('The Vectors Have Different Amount of Values!')

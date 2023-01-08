@@ -198,5 +198,85 @@ $$x_{1,scaled} = \frac{x_{1}}{x_{1, max}}$$
 
 In addition to dividing by the maximum, you can also do what's called **Mean Normalization**. 
 What this looks like is, you start with the original features and you re-scale them so that both them are centered around zero. So, whereas before they only had values greater than zero, now they have both negative and positive values, that may be usually between negative one and plus one.
-So to calculate the mean normalization, first find the average, also called the mean of the number.
+So to calculate the mean normalization, first find the average, also called the mean of the number. You can calculate the new features scaled using the mean of the number by the **Mean Normalization** method like that:
 
+$$x_{i, j} = \frac{x_{i, j}-\mu_{j}}{x_{j, max}-x_{j,  min}}$$
+
+Knowing that i range is:
+
+$$i = 1, 2, ..., m$$
+
+You can interprete m as the measurement of the quantity of values that the feature has.
+
+And j is ther number of features that the **Multiple Linear Regression Model** will work, the maximum amount is represent by the letter n.
+
+There is one last commong re-scaling method called **Z-core Normalization**. To implement **Z-Score Normalization** you need to calculate something called the standard deviation of each feature. You will have to first calculate the mean, as well as the standar , which if often denoted by the lowercase Greek alphabet Sigma of each feature.
+
+The equation for the **Z-Score Normalization** method is:
+
+$$x_{i, j} = \frac{x_{i, j}-\mu_{j}}{\sigma_{j}}$$
+
+As a rule of thumb, when performing **Feature Scaling**, you might wanto to aim for getting the features to range from maybe anywhere around negative one to somewhere around plus one, for each feature.
+But this range values can be a little bit loose.
+
+You can get a sense of when reascaling is justified to be applied by this image:
+
+![[Image  8 - Scenarios to Evalute Apply Feature Scaling.png]]
+
+When running **Gradient Descent** how can you tell if it's converging? That is, wheter it's helping you to find parameters close to the global minimum of the **Cost Function**. By learning to recognize what a well-running implementation of **Gradient Descent** looks like, we will also be better able to choose a good **Learning Rate**.
+
+As a reminder here's the **Gradient Descent** rule:
+
+$$w_{j} = w_{j}-\alpha\frac{\partial}{\partial{w_{j}}}J(\vec{w}, b)$$
+
+$$b = b-\alpha\frac{\partial}{\partial{b}}J(\vec{w}, b)$$
+
+One of the key choises is the choise of the **Learning Rate**.
+
+Here's something that I often do to make sure that **Gradient Descent** is working well: Recall that the job of the method if find values for the parameters  to hope minimize the **Cost Function**.
+What I'll often do is plot the **Cost Function**, which is calculated on the training set, and i plot the value of J at each iteration of **Gradient Descent**. Remember that each iteration means after each simultaneous update, of the parameters. 
+**The Cost Function** will be ploted in the vertical axis and the horizontal axis will alocate values of each iteration of the method.
+From this plot you may get a curve that looks like this:
+
+![[Image 9 - Example of the Learning Curve.png]]
+
+This curve is also called a **Learning Curve**. Note that there are a few different types of **Learning Curves** used in **Machine Learning**.
+
+If **Gradient Descent** is working properly then the value of the **Cost Function** should decrease after every single iteration. If the value increases after one single iteration, that means either the **Learning Rate** is choosen poorly, and it usually means its value is too large, or there could be a bug in the code.
+
+Another useful thing that this part can tell you in from which iteration the **Cost Function** is levelling off and it's no longer decreasing much. When the levelling of the curve happeng that means that the method is more or less corvengerd.
+By the way, the number of iteration that the method can take to converge can vary a lot between different applications.
+
+Another way to decide when your training model is done training is with an **Automatic Convergence Test**. You can define one arbitrary number and if the **Cost Funcation** descreses equals or less between iteration, you can declare that the method has converged. Because you're likely in thos flattened part of the **Learning Curve**.
+
+Your learning algorithm will run much better with an appropriate choice of **Learning Rate**. If's too small it will run very slowly and if it is too large, it may not even converge.
+
+Concretely, if you plot the **Cost Function** for a number of iterations and notice that the Cost sometimes goes up and sometimes goes down, you should take that as a clear sign that **Gradient Descent** is not working properly. This could mean that there's a bug in the code. Or sometimes it could mean that your **Learning Rate** is too large. 
+If the **Cost Function** is consistenly increasing after each iteration, this is also likely due to a **Learning Rate** that is too large and it could be addressed by choosing a smaller value. But a **Cost Function** that behavior like this can also be sign of a broken code.
+
+One debugging tip for a correct implementation of **Gradient Descent** is that with a small enough **Learning Rate**, the **Cost Function** should decrease on every single iteration.
+
+So if **Gradient Descent** isn't working, one thing I'll often do is just set the value of the **Learning Rate** to be a very small number and see if that causes the Cost to decrease on every iteration. If even with the **Learning Rate** set to a very small number, the value of the **Cost Function** doesn't decrease on every single iteration, but instead sometimes increases, then that usually means there's a bug somewhere in the code.
+
+A good methodology for choosing the value of the **Learning Rate** is set its initial number as a very small one and gradually increasing its value to see how the it affect the **Cost Function**. You can see an ilustration of a real application of this technique below:
+
+![[Image 10 - Application of Differente Learning Rates.png]]
+
+
+## Feature Engineering
+
+The choice of features can have a huge impact on your learning algorithm's performance. In fact, for many pratical applications, choosing or entering the right features is a critical step to making the algorithm work well.
+
+Feature engineering: Using intuiton to design new features, by transforming or combining original features.
+
+## Polynomial Regression
+
+This algorithm let's you fit curves, non-linear functions, to your data. 
+
+When you have a dataset that a straight line doesn't appear to fit it very well, you can resort to fit a curve to your data. 
+
+A **Polynomial Regression** is when you take your feature and raised it to a power greather than zero.
+
+When you create features that are these powers, like the square of the original features, then **Features Scaling** becomes increasingly more important.
+
+As feature raised by half or any root operation also be applied to fit the data as a possibility.
