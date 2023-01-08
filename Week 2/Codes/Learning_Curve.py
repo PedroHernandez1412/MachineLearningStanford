@@ -48,12 +48,12 @@ m = len(x_train)
 alpha = 1e-2
 
 # Gradient Descent
-interactions = 15
+interactions = 40
 J_history = []
 for i in range (interactions):
     dJdw, dJdb = DerivativeCF(x_train, y_train, w, b)
-    w = w - alpha * dJdw
-    b = b - alpha * dJdb
+    w = w - (alpha * dJdw) / (m)
+    b = b - (alpha * dJdb) / (m)
     J_history.append(CostFunction(x_train, y_train, w, b))
 
 # Linear Regression Model:
