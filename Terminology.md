@@ -6,5 +6,3 @@
 [(xi, yi)]: ith training example
 [f]: Function generate by the algorithm
 [ŷ]: Prediction
-
-x
