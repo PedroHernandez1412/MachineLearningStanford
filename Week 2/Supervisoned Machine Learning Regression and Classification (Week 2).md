@@ -23,7 +23,7 @@ And the domain that measures the number of features have this generic dimension:
 
 $$j = 1, 2, 3...n$$
 
-The subscript i will reference one specific row of features that was measured for the same sample, that can be called  a row vector. The example below ilustrate that betters:
+The subscript i will reference one specific row of features that was measured for the same sample, that can be called a row vector. The example below ilustrate that betters:
 
 ![[Image 1 - Multiple Feature Example and Notation.png]]
 

@@ -19,6 +19,7 @@ def FeatureScalingSD(x):
     return x_scaled
 
 x = [np.array([1, 2, 3]), np.array([2, 4, 6]), np.array([1, 3, 5]), np.array([10, 11, 13])]
+print(x)
 
 scaled_list = []
 for x_i in x:

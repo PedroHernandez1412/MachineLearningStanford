@@ -59,7 +59,7 @@ for i in range(interactions):
     J_history.append(J)
 print(f"Final Value of the Parameter w: \n{w}")
 print(f"Final Value of the Parameter b: \n{b:.2f}")
-print(f"Cost Function Final Value: \n{J}")
+print(f"Final Value of the Cost Function: \n{J_history[interactions-1]}")
 
 # Final Value of The Predctions:
 f_wb_history = []
@@ -71,8 +71,7 @@ print(f"Final Results of the Predictions: \n{f_wb_history}")
 
 # Prediction:
 x_prediction = np.array([1200, 3, 1, 40])
-for i in range(m):
-    f_wb = np.dot(w, x_prediction) + b
+f_wb = np.dot(w, x_prediction) + b
 print(f"Value of the Prediciton: \n{f_wb:.0f}")
 
 # Learning Curve:
