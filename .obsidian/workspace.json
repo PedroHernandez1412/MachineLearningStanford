@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 2/Supervisoned Machine Learning Regression and Classification (Week 2).md",
+                "file": "Week 3/Supervisoned Machine Learning Regression and Classification (Week 3).md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "86895af8b823a802",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 2/Supervisoned Machine Learning Regression and Classification (Week 2).md",
+                "file": "Week 3/Supervisoned Machine Learning Regression and Classification (Week 3).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 2/Supervisoned Machine Learning Regression and Classification (Week 2).md",
+                "file": "Week 3/Supervisoned Machine Learning Regression and Classification (Week 3).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 2/Supervisoned Machine Learning Regression and Classification (Week 2).md"
+                "file": "Week 3/Supervisoned Machine Learning Regression and Classification (Week 3).md"
               }
             }
           }
@@ -148,15 +148,15 @@
   },
   "active": "9d7b9e33bae5632f",
   "lastOpenFiles": [
-    "Image  8 - Scenarios to Evalute Apply Feature Scaling.png.md",
-    "Week 2/Supervisoned Machine Learning Regression and Classification (Week 2).md",
+    "Week 3/Images/Image 07 - Underfitting and Overfitting in a Classification Context.png",
     "Week 3/Supervisoned Machine Learning Regression and Classification (Week 3).md",
+    "Week 3/Images/Image 06 - Example of Overfitting.png",
+    "Week 3/Images/Image 05 - Example of Underfitting.png",
+    "Week 3/Derivative of the Logisitic Cost Function.md",
+    "Week 3/Images/Pasted image 20230114221231.png",
     "Supervisioned Machine Learning - Regression and Classification.md",
-    "Week 1/Supervisoned Machine Learning Regression and Classification (Week 1).md",
-    "Week 2/Images/Image 9 - Example of the Learning Curve.png",
-    "Week 2/Images/Image 10 - Application of Differente Learning Rates.png",
-    "Week 2/Python, NumPy and Vectorization.md",
-    "Week 2/Images/Image 9 - Example of the Learning Curve.png.md",
-    "Week 2/Images/Image 8 - Scenarios to Evalute Apply Feature Scaling.png"
+    "Week 2/Supervisoned Machine Learning Regression and Classification (Week 2).md",
+    "Pasted image 20230114152116.png.md",
+    "Week 3/Images/Pasted image 20230114152116.png"
   ]
 }
